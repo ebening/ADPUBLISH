@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://service.cm.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax21="http://dto.cm.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.cm.com">
+    <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.cm.com/xsd">
+            <xs:complexType name="Result">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="errorCode" type="xs:int"/>
+                    <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="list" nillable="true" type="ax21:Document"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Document">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="author_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="contentmanagerEstatus" type="xs:int"/>
+                    <xs:element minOccurs="0" name="date_publish" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="doc_Url" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="document_id" type="xs:int"/>
+                    <xs:element minOccurs="0" name="document_type_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="idDocument_send" type="xs:int"/>
+                    <xs:element minOccurs="0" name="idDocument_type" type="xs:int"/>
+                    <xs:element minOccurs="0" name="idIndustry" type="xs:int"/>
+                    <xs:element minOccurs="0" name="idLanguage" type="xs:int"/>
+                    <xs:element minOccurs="0" name="idMarket" type="xs:int"/>
+                    <xs:element minOccurs="0" name="idStatus_publish" type="xs:int"/>
+                    <xs:element minOccurs="0" name="industry_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="isEmisora" type="xs:int"/>
+                    <xs:element minOccurs="0" name="language_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="market_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="publish_status_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="subject_name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="urlType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="urlVector" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="url_html_form" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="url_pdf_form" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax22="http://dto.cm.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.cm.com">
+            <xs:import namespace="http://dto.cm.com/xsd"/>
+            <xs:element name="documentSearch">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="idDocumento" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="idMercado" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sFechaInicial" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sFechaFinal" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sTema" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sSector" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="idSector" type="xs:int"/>
+                        <xs:element minOccurs="0" name="sIdioma" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sEstado" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sAutor" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sPalabraClave" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sColumnaOrden" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sTipoOrden" type="xs:int"/>
+                        <xs:element minOccurs="0" name="iPag" type="xs:int"/>
+                        <xs:element minOccurs="0" name="iMaxCant" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="documentSearchResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:Result"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateStatus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="idDocumento" type="xs:int"/>
+                        <xs:element minOccurs="0" name="idStatus" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="updateStatusRequest">
+        <wsdl:part name="parameters" element="ns:updateStatus"/>
+    </wsdl:message>
+    <wsdl:message name="updateStatusResponse">
+        <wsdl:part name="parameters" element="ns:updateStatusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="documentSearchRequest">
+        <wsdl:part name="parameters" element="ns:documentSearch"/>
+    </wsdl:message>
+    <wsdl:message name="documentSearchResponse">
+        <wsdl:part name="parameters" element="ns:documentSearchResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="DocumentServicePortType">
+        <wsdl:operation name="updateStatus">
+            <wsdl:input message="ns:updateStatusRequest" wsaw:Action="urn:updateStatus"/>
+            <wsdl:output message="ns:updateStatusResponse" wsaw:Action="urn:updateStatusResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="documentSearch">
+            <wsdl:input message="ns:documentSearchRequest" wsaw:Action="urn:documentSearch"/>
+            <wsdl:output message="ns:documentSearchResponse" wsaw:Action="urn:documentSearchResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="DocumentServiceSoap11Binding" type="ns:DocumentServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="updateStatus">
+            <soap:operation soapAction="urn:updateStatus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="documentSearch">
+            <soap:operation soapAction="urn:documentSearch" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DocumentServiceSoap12Binding" type="ns:DocumentServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="updateStatus">
+            <soap12:operation soapAction="urn:updateStatus" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="documentSearch">
+            <soap12:operation soapAction="urn:documentSearch" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DocumentServiceHttpBinding" type="ns:DocumentServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="updateStatus">
+            <http:operation location="updateStatus"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="documentSearch">
+            <http:operation location="documentSearch"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="DocumentService">
+        <wsdl:port name="DocumentServiceHttpSoap11Endpoint" binding="ns:DocumentServiceSoap11Binding">
+            <soap:address location="http://192.168.10.97:8080/SearchCM/services/DocumentService.DocumentServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="DocumentServiceHttpSoap12Endpoint" binding="ns:DocumentServiceSoap12Binding">
+            <soap12:address location="http://192.168.10.97:8080/SearchCM/services/DocumentService.DocumentServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="DocumentServiceHttpEndpoint" binding="ns:DocumentServiceHttpBinding">
+            <http:address location="http://192.168.10.97:8080/SearchCM/services/DocumentService.DocumentServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

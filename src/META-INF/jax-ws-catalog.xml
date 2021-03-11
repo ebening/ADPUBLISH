@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?wsdl" uri="xml-resources/web-service-references/VectorMedia/wsdl/204.126.12.161_90/AnalisisWS/VectorMedia.svc.wsdl"/>
+    <system systemId="http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?xsd=xsd0" uri="xml-resources/web-service-references/VectorMedia/wsdl/204.126.12.161_90/AnalisisWS/VectorMedia.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?xsd=xsd1" uri="xml-resources/web-service-references/VectorMedia/wsdl/204.126.12.161_90/AnalisisWS/VectorMedia.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?xsd=xsd2" uri="xml-resources/web-service-references/VectorMedia/wsdl/204.126.12.161_90/AnalisisWS/VectorMedia.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?xsd=xsd3" uri="xml-resources/web-service-references/VectorMedia/wsdl/204.126.12.161_90/AnalisisWS/VectorMedia.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://204.126.12.161:90/VCBAuthWS/Access.svc?wsdl" uri="wsdl/204.126.12.161_90/VCBAuthWS/Access.svc.wsdl"/>
+    <system systemId="http://204.126.12.161:90/VCBAuthWS/Access.svc?xsd=xsd0" uri="wsdl/204.126.12.161_90/VCBAuthWS/Access.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://204.126.12.161:90/VCBAuthWS/Access.svc?xsd=xsd1" uri="wsdl/204.126.12.161_90/VCBAuthWS/Access.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://204.126.12.161:90/VCBAuthWS/Access.svc?xsd=xsd2" uri="wsdl/204.126.12.161_90/VCBAuthWS/Access.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://204.126.12.170:8282/analisisWS/Data.svc?wsdl" uri="wsdl/204.126.12.170_8282/analisisWS/Data.svc.wsdl"/>
+    <system systemId="http://204.126.12.170:8282/AnalisisWS/Data.svc?wsdl" uri="wsdl/204.126.12.170_8282/AnalisisWS/Data.svc.wsdl"/>
+    <system systemId="http://204.126.12.170:8282/AnalisisWS/Data.svc?xsd=xsd0" uri="wsdl/204.126.12.170_8282/AnalisisWS/Data.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://204.126.12.170:8282/AnalisisWS/Data.svc?xsd=xsd1" uri="wsdl/204.126.12.170_8282/AnalisisWS/Data.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://204.126.12.170:8282/AnalisisWS/Data.svc?xsd=xsd2" uri="wsdl/204.126.12.170_8282/AnalisisWS/Data.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://204.126.12.170:8282/AnalisisWS/Data.svc?xsd=xsd3" uri="wsdl/204.126.12.170_8282/AnalisisWS/Data.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://192.168.10.97:8080/SearchCM/services/Version?wsdl" uri="wsdl/192.168.10.97_8080/SearchCM/services/Version.wsdl"/>
+    <system systemId="http://192.168.10.97:8080/SearchCM/services/DocumentService?wsdl" uri="wsdl/192.168.10.97_8080/SearchCM/services/DocumentService.wsdl"/>
+</catalog>

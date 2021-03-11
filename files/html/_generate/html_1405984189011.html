@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vector</title>
+        <meta name="description" content="Vector Reportes">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../fonts/museo-sans/stylesheet.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/responsiveslides.css">
+        <link rel="stylesheet" href="../css/fancybox/jquery.fancybox.css">
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="/">
+                        <img src="../img/logo.png" alt="Vector">
+                    </a>
+                </div>
+                <div class="document-date">
+                    21/07/2014
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class='wrap'>
+                <div class="analisis">
+                    <img src="../img/vector-analisis.png" alt="Vector Analisis">
+                </div>
+                <div class='content'>
+                    <h1 style="font-weight: bold">ECONOMICO</h1>
+                    <div><p style="margin-top: 0">
+      <b>TEXTO LARGO TOP</b>
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      CAMBIO PARA CAROLINA
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      BLABLABLABLA
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      <b>MASTITULOS </b>
+    </p>
+    <p style="margin-top: 0">
+      OTRO PARRAFO
+    </p></div>
+                    <div><h3>asdf</h3>
+<h4>sdf</h4>
+<div class='image'>
+ <img    src='data:image/png;base64,null'>
+</a></div>
+<div class='description' >
+sdf</div>
+</div>
+                    <div><p style="margin-top: 0">
+      <b>TEXTO LARGO BOTTTOM</b>
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      CON EMISORA SE APLICA UN TEXTO LARGO CON FORMATO PARA PRUEBA
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      BLABLABLABLA
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      <b>MASTITULOS</b>
+    </p>
+    <p style="margin-top: 0">
+      OTRO PARRAFOCon emisora bottom
+    </p></div>
+                    <div><h3>asdf</h3>
+<h4>asdf</h4>
+<div class='image'>
+ <img    src='data:image/png;base64,null'>
+</a></div>
+<div class='description' >
+asdf</div>
+</div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/jquery-1.8.3.min.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/vendor/responsiveslides.js"></script>
+        <script src="../js/vendor/jquery.fancybox.js"></script>
+        <script>
+            $(function() {
+                $('.fancybox').fancybox();
+                $(".various").fancybox({
+                    maxWidth: 800,
+                    maxHeight: 600,
+                    fitToView: false,
+                    width: '70%',
+                    height: '70%',
+                    autoSize: false,
+                    closeClick: false,
+                    openEffect: 'none',
+                    closeEffect: 'none'
+                });
+                $(".rslides").responsiveSlides({
+                    auto: false,
+                    /*
+                     auto: true,             // Boolean: Animate automatically, true or false
+                     speed: 500,            // Integer: Speed of the transition, in milliseconds
+                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+                     pager: false,           // Boolean: Show pager, true or false
+                     */ nav: true /*,             // Boolean: Show navigation, true or false
+                      random: false,          // Boolean: Randomize the order of the slides, true or false
+                      pause: false,           // Boolean: Pause on hover, true or false
+                      pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+                      prevText: "Previous",   // String: Text for the "previous" button
+                      nextText: "Next",       // String: Text for the "next" button
+                      maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+                      navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                      manualControls: "",     // Selector: Declare custom pager navigation
+                      namespace: "rslides",   // String: Change the default namespace used
+                      before: function(){},   // Function: Before callback
+                      after: function(){}     // Function: After callback
+                      */
+                });
+            });
+
+
+        </script>
+        <script>
+
+
+
+            $(document).ready(function() {
+
+                $("#fecha").empty().text(output);
+
+
+                $(".increase").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    fontSize = fontSize + 2 + "px";
+                    $("p").css({'font-size': fontSize});
+
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    fontSizeh3 = fontSizeh3 + 2 + "px";
+                    $("h3").css({'font-size': fontSizeh3});
+
+                });
+
+                $(".decrease").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    if (fontSize != 14) {
+                        fontSize = fontSize - 2 + "px";
+                        $("p").css({'font-size': fontSize});
+                    }
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    if (fontSizeh3 != 14) {
+                        fontSizeh3 = fontSizeh3 - 2 + "px";
+                        $("h3").css({'font-size': fontSizeh3});
+                    }
+
+                });
+
+
+            });
+
+        </script>		
+    </body>
+</html>

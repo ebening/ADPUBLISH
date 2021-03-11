@@ -1,0 +1,77 @@
+.add-all-option {
+	color: #AAAAAA; 
+}
+
+.element-day {
+	border: 1px solid #DFDFDF;
+	height: 280px;
+	width: 190px;
+}
+
+.element-day-shadow {
+	background: #EEEEEE;
+}
+
+.element-day-header {
+	width: 85%; 
+	color: #AAAAAA; 
+	height: 15px;
+}
+
+.element-day-header span {
+	padding-left: 10px
+}
+
+.element-day-number {
+	width:15%; 
+	background: #343434; 
+	color: #FFF; 
+	text-align: center;
+}
+
+.element-day-footer {
+	color: #AAAAAA; 
+	height: 30px;
+}
+
+.diary-table {
+	width: 950px;
+	border: 1px solid #CECECE;
+}
+
+.diary-table th {
+	background: #D0E0EF;
+	color: #596E81;
+	border-right: 1px solid #CECECE;
+	text-align: left;
+}
+
+.diary-table td{
+	border-right: 1px solid #CECECE;
+}
+
+.diary-table-footer {
+	background: #7F7F7F;
+	color: #FFF;
+	height: 30px;
+}
+
+.cal_img_todos {
+	background-image: url("../img/calendars.png");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 38px;
+	width: 38px;
+	display:inline-block;
+	cursor: pointer;
+}
+
+.cal_img {
+	background-image: url("../img/calendars-small.png");
+	background-repeat: no-repeat;
+	background-position: 0px -26px;
+	height: 24px;
+	width: 24px;
+	display:inline-block;
+	cursor: pointer;
+}

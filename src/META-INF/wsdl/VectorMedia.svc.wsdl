@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="VectorMedia" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://tempuri.org/Imports">
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/VectorMedia.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/VectorMedia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/VectorMedia.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VCB.General.Data.Kaltura"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/VectorMedia.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VCB.Analisis.Data.VectorMedia"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IVectorMedia_KalturaCategorias_InputMessage">
+        <wsdl:part name="parameters" element="tns:KalturaCategorias"/>
+    </wsdl:message>
+    <wsdl:message name="IVectorMedia_KalturaCategorias_OutputMessage">
+        <wsdl:part name="parameters" element="tns:KalturaCategoriasResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IVectorMedia_GetVectorMediaCatalogos_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetVectorMediaCatalogos"/>
+    </wsdl:message>
+    <wsdl:message name="IVectorMedia_GetVectorMediaCatalogos_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetVectorMediaCatalogosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IVectorMedia_Buscar_InputMessage">
+        <wsdl:part name="parameters" element="tns:Buscar"/>
+    </wsdl:message>
+    <wsdl:message name="IVectorMedia_Buscar_OutputMessage">
+        <wsdl:part name="parameters" element="tns:BuscarResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IVectorMedia">
+        <wsdl:operation name="KalturaCategorias">
+            <wsdl:input wsaw:Action="http://tempuri.org/IVectorMedia/KalturaCategorias" message="tns:IVectorMedia_KalturaCategorias_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IVectorMedia/KalturaCategoriasResponse" message="tns:IVectorMedia_KalturaCategorias_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetVectorMediaCatalogos">
+            <wsdl:input wsaw:Action="http://tempuri.org/IVectorMedia/GetVectorMediaCatalogos" message="tns:IVectorMedia_GetVectorMediaCatalogos_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IVectorMedia/GetVectorMediaCatalogosResponse" message="tns:IVectorMedia_GetVectorMediaCatalogos_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Buscar">
+            <wsdl:input wsaw:Action="http://tempuri.org/IVectorMedia/Buscar" message="tns:IVectorMedia_Buscar_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IVectorMedia/BuscarResponse" message="tns:IVectorMedia_Buscar_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IVectorMedia" type="tns:IVectorMedia">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="KalturaCategorias">
+            <soap:operation soapAction="http://tempuri.org/IVectorMedia/KalturaCategorias" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetVectorMediaCatalogos">
+            <soap:operation soapAction="http://tempuri.org/IVectorMedia/GetVectorMediaCatalogos" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Buscar">
+            <soap:operation soapAction="http://tempuri.org/IVectorMedia/Buscar" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="VectorMedia">
+        <wsdl:port name="BasicHttpBinding_IVectorMedia" binding="tns:BasicHttpBinding_IVectorMedia">
+            <soap:address location="http://204.126.12.170:8282/AnalisisWS/VectorMedia.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

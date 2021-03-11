@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="Publicador" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://tempuri.org/Imports">
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/Publicador.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/Publicador.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/Publicador.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VCB.Analisis.Data.Publicador"/>
+            <xsd:import schemaLocation="http://204.126.12.170:8282/AnalisisWS/Publicador.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VCB.Analisis.Data"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IPublicador_ActividadesFiscales_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActividadesFiscales"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActividadesFiscales_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActividadesFiscalesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposSuscriptores_InputMessage">
+        <wsdl:part name="parameters" element="tns:TiposSuscriptores"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposSuscriptores_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TiposSuscriptoresResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposSuscriptoresPorCanal_InputMessage">
+        <wsdl:part name="parameters" element="tns:TiposSuscriptoresPorCanal"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposSuscriptoresPorCanal_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TiposSuscriptoresPorCanalResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_PerfilesRiesgo_InputMessage">
+        <wsdl:part name="parameters" element="tns:PerfilesRiesgo"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_PerfilesRiesgo_OutputMessage">
+        <wsdl:part name="parameters" element="tns:PerfilesRiesgoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ListaDistribucion_InputMessage">
+        <wsdl:part name="parameters" element="tns:ListaDistribucion"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ListaDistribucion_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ListaDistribucionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposContratos_InputMessage">
+        <wsdl:part name="parameters" element="tns:TiposContratos"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposContratos_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TiposContratosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposDocumentos_InputMessage">
+        <wsdl:part name="parameters" element="tns:TiposDocumentos"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_TiposDocumentos_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TiposDocumentosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_Categorias_InputMessage">
+        <wsdl:part name="parameters" element="tns:Categorias"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_Categorias_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CategoriasResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptoresEstatus_InputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptoresEstatus"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptoresEstatus_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptoresEstatusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ConfiguracionDocumento_InputMessage">
+        <wsdl:part name="parameters" element="tns:ConfiguracionDocumento"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ConfiguracionDocumento_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ConfiguracionDocumentoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BusquedaSuscriptores_InputMessage">
+        <wsdl:part name="parameters" element="tns:BusquedaSuscriptores"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BusquedaSuscriptores_OutputMessage">
+        <wsdl:part name="parameters" element="tns:BusquedaSuscriptoresResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptorInfo_InputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptorInfo"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptorInfo_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptorInfoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptorSuscripciones_InputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptorSuscripciones"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_SuscriptorSuscripciones_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SuscriptorSuscripcionesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_PaginasMiVector_InputMessage">
+        <wsdl:part name="parameters" element="tns:PaginasMiVector"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_PaginasMiVector_OutputMessage">
+        <wsdl:part name="parameters" element="tns:PaginasMiVectorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BusquedaPublicaciones_InputMessage">
+        <wsdl:part name="parameters" element="tns:BusquedaPublicaciones"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BusquedaPublicaciones_OutputMessage">
+        <wsdl:part name="parameters" element="tns:BusquedaPublicacionesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_NuevoSuscriptor_InputMessage">
+        <wsdl:part name="parameters" element="tns:NuevoSuscriptor"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_NuevoSuscriptor_OutputMessage">
+        <wsdl:part name="parameters" element="tns:NuevoSuscriptorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizaSuscriptor_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizaSuscriptor"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizaSuscriptor_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizaSuscriptorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizaSuscriptorCampo_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizaSuscriptorCampo"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizaSuscriptorCampo_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizaSuscriptorCampoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizarSuscriptorSuscripciones_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizarSuscriptorSuscripciones"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_ActualizarSuscriptorSuscripciones_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActualizarSuscriptorSuscripcionesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BajaSuscriptores_InputMessage">
+        <wsdl:part name="parameters" element="tns:BajaSuscriptores"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BajaSuscriptores_OutputMessage">
+        <wsdl:part name="parameters" element="tns:BajaSuscriptoresResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BajaSuscriptor_InputMessage">
+        <wsdl:part name="parameters" element="tns:BajaSuscriptor"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_BajaSuscriptor_OutputMessage">
+        <wsdl:part name="parameters" element="tns:BajaSuscriptorResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_NuevaPaginaMiVector_InputMessage">
+        <wsdl:part name="parameters" element="tns:NuevaPaginaMiVector"/>
+    </wsdl:message>
+    <wsdl:message name="IPublicador_NuevaPaginaMiVector_OutputMessage">
+        <wsdl:part name="parameters" element="tns:NuevaPaginaMiVectorResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IPublicador">
+        <wsdl:operation name="ActividadesFiscales">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ActividadesFiscales" message="tns:IPublicador_ActividadesFiscales_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ActividadesFiscalesResponse" message="tns:IPublicador_ActividadesFiscales_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TiposSuscriptores">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/TiposSuscriptores" message="tns:IPublicador_TiposSuscriptores_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/TiposSuscriptoresResponse" message="tns:IPublicador_TiposSuscriptores_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TiposSuscriptoresPorCanal">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/TiposSuscriptoresPorCanal" message="tns:IPublicador_TiposSuscriptoresPorCanal_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/TiposSuscriptoresPorCanalResponse" message="tns:IPublicador_TiposSuscriptoresPorCanal_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="PerfilesRiesgo">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/PerfilesRiesgo" message="tns:IPublicador_PerfilesRiesgo_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/PerfilesRiesgoResponse" message="tns:IPublicador_PerfilesRiesgo_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ListaDistribucion">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ListaDistribucion" message="tns:IPublicador_ListaDistribucion_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ListaDistribucionResponse" message="tns:IPublicador_ListaDistribucion_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TiposContratos">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/TiposContratos" message="tns:IPublicador_TiposContratos_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/TiposContratosResponse" message="tns:IPublicador_TiposContratos_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TiposDocumentos">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/TiposDocumentos" message="tns:IPublicador_TiposDocumentos_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/TiposDocumentosResponse" message="tns:IPublicador_TiposDocumentos_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Categorias">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/Categorias" message="tns:IPublicador_Categorias_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/CategoriasResponse" message="tns:IPublicador_Categorias_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptoresEstatus">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/SuscriptoresEstatus" message="tns:IPublicador_SuscriptoresEstatus_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/SuscriptoresEstatusResponse" message="tns:IPublicador_SuscriptoresEstatus_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfiguracionDocumento">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ConfiguracionDocumento" message="tns:IPublicador_ConfiguracionDocumento_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ConfiguracionDocumentoResponse" message="tns:IPublicador_ConfiguracionDocumento_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BusquedaSuscriptores">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/BusquedaSuscriptores" message="tns:IPublicador_BusquedaSuscriptores_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/BusquedaSuscriptoresResponse" message="tns:IPublicador_BusquedaSuscriptores_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptorInfo">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/SuscriptorInfo" message="tns:IPublicador_SuscriptorInfo_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/SuscriptorInfoResponse" message="tns:IPublicador_SuscriptorInfo_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptorSuscripciones">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/SuscriptorSuscripciones" message="tns:IPublicador_SuscriptorSuscripciones_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/SuscriptorSuscripcionesResponse" message="tns:IPublicador_SuscriptorSuscripciones_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="PaginasMiVector">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/PaginasMiVector" message="tns:IPublicador_PaginasMiVector_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/PaginasMiVectorResponse" message="tns:IPublicador_PaginasMiVector_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BusquedaPublicaciones">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/BusquedaPublicaciones" message="tns:IPublicador_BusquedaPublicaciones_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/BusquedaPublicacionesResponse" message="tns:IPublicador_BusquedaPublicaciones_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="NuevoSuscriptor">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/NuevoSuscriptor" message="tns:IPublicador_NuevoSuscriptor_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/NuevoSuscriptorResponse" message="tns:IPublicador_NuevoSuscriptor_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizaSuscriptor">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ActualizaSuscriptor" message="tns:IPublicador_ActualizaSuscriptor_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ActualizaSuscriptorResponse" message="tns:IPublicador_ActualizaSuscriptor_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizaSuscriptorCampo">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ActualizaSuscriptorCampo" message="tns:IPublicador_ActualizaSuscriptorCampo_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ActualizaSuscriptorCampoResponse" message="tns:IPublicador_ActualizaSuscriptorCampo_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizarSuscriptorSuscripciones">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/ActualizarSuscriptorSuscripciones" message="tns:IPublicador_ActualizarSuscriptorSuscripciones_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/ActualizarSuscriptorSuscripcionesResponse" message="tns:IPublicador_ActualizarSuscriptorSuscripciones_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BajaSuscriptores">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/BajaSuscriptores" message="tns:IPublicador_BajaSuscriptores_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/BajaSuscriptoresResponse" message="tns:IPublicador_BajaSuscriptores_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BajaSuscriptor">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/BajaSuscriptor" message="tns:IPublicador_BajaSuscriptor_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/BajaSuscriptorResponse" message="tns:IPublicador_BajaSuscriptor_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="NuevaPaginaMiVector">
+            <wsdl:input wsaw:Action="http://tempuri.org/IPublicador/NuevaPaginaMiVector" message="tns:IPublicador_NuevaPaginaMiVector_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IPublicador/NuevaPaginaMiVectorResponse" message="tns:IPublicador_NuevaPaginaMiVector_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IPublicador" type="tns:IPublicador">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ActividadesFiscales">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ActividadesFiscales" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="TiposSuscriptores">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/TiposSuscriptores" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="TiposSuscriptoresPorCanal">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/TiposSuscriptoresPorCanal" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="PerfilesRiesgo">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/PerfilesRiesgo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ListaDistribucion">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ListaDistribucion" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="TiposContratos">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/TiposContratos" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="TiposDocumentos">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/TiposDocumentos" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Categorias">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/Categorias" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptoresEstatus">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/SuscriptoresEstatus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConfiguracionDocumento">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ConfiguracionDocumento" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="BusquedaSuscriptores">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/BusquedaSuscriptores" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptorInfo">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/SuscriptorInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SuscriptorSuscripciones">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/SuscriptorSuscripciones" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="PaginasMiVector">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/PaginasMiVector" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="BusquedaPublicaciones">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/BusquedaPublicaciones" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="NuevoSuscriptor">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/NuevoSuscriptor" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizaSuscriptor">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ActualizaSuscriptor" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizaSuscriptorCampo">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ActualizaSuscriptorCampo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ActualizarSuscriptorSuscripciones">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/ActualizarSuscriptorSuscripciones" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="BajaSuscriptores">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/BajaSuscriptores" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="BajaSuscriptor">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/BajaSuscriptor" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="NuevaPaginaMiVector">
+            <soap:operation soapAction="http://tempuri.org/IPublicador/NuevaPaginaMiVector" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Publicador">
+        <wsdl:port name="BasicHttpBinding_IPublicador" binding="tns:BasicHttpBinding_IPublicador">
+            <soap:address location="http://204.126.12.170:8282/AnalisisWS/Publicador.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

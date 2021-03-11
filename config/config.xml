@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <start-opt>
+    <option>-Xms32m</option>
+    <option>-Xmx100m</option>
+    <option>-XX:+HeapDumpOnOutOfMemoryError</option>
+    <option>-XX:-UseGCOverheadLimit</option>
+    <option>-XX:+DisableExplicitGC</option>
+    <option>-XX:+UseConcMarkSweepGC</option>
+    <option>-XX:SurvivorRatio=8</option>
+    <option>-XX:NewSize=17m</option>
+    <option>-XX:MaxGCPauseMillis=4000</option>
+  </start-opt>
+  <ws-opt>
+    <option wsdl="http://www.identifica-fotos.com/PhotoCaptureWS2.2/PCaptureWSService?wsdl" default="true">IDentifica 2011</option>
+  </ws-opt>
+  <mysql-db>
+    <option>photodb</option>
+  </mysql-db>
+  <mysql-db-properties>
+    <option name="autoReconnect">true</option>
+    <option name="maxReconnects">10</option>
+  </mysql-db-properties>
+  <crop-dialog>
+    <option>CFBS</option>
+    <!-- 5X6 -->
+    <option>COBS</option>
+    <!-- 4X6 -->
+    <option>CFBF</option>
+    <!-- 4X4 -->
+    <option>CTBF</option>
+    <!-- 2X4 -->
+    <option>CSBT</option>
+    <!-- 6X2 -->
+    <option>SSSS</option>
+    <!-- setting's, sepia, gray, brigthnes, contrast -->
+  </crop-dialog>
+  <default />
+  <executable>
+    <option>*.jar</option>
+  </executable>
+  <databases>
+    <option name="Base de Datos Default">C:\HolaMundo2</option>
+    <option name="Base de Datos Default" default="true">C:\HolaMundo3</option>
+    <option name="Base de Datos Default">C:\HolaMundo3</option>
+    <option default="true" name="Base de Datos Default">C:\HolaMundo3</option>
+  </databases>
+</root>
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vector | Reportes</title>
+<meta name="description" content="Vector Reportes">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="../../../../../../../fonts/museo-sans/stylesheet.css">
+<link rel="stylesheet" href="../../../../../../../css/normalize.css">
+<link rel="stylesheet" href="../../../../../../../css/main.css">
+<script src="../../../../../../../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body class="front">
+<!-- Content -->
+<div class="header">
+  <div class="wrap">
+    <div class="logo"> <a href="http://www.adinfi.com/"> <img src="../../../../../../../img/logo.png" alt="adPublish"> </a> </div>
+  </div>
+</div>
+<div class="semanario-header">
+  <div class="wrap">
+    <div class="analisis"> <img src="../../../../../../../img/adpublish-analisis-big.png" alt="adPublish"> </div>
+    <h1>Semanario Financiero</h1>
+    <h2>@FECHA</h2>
+  </div>
+</div>
+<div class="main-container">
+  <div class="wrap">
+    <div class="content">
+      <div class="menu-container clearfix"> <a class="toggler-menu"><img src="../../../../../../../img/menu-home.png"></a>
+        <div class="menu-nuevo">
+          <ul class="listado">
+		     @MARKETS
+		    <!--
+            <li><a href="#">Dinero</a></li>
+            <li><a href="#">Económico</a></li>
+            <li><a href="#">Fundamental</a></li>
+            <li><a style="line-height: 1; padding: 4px 0 12px;" href="#">Operación Bursátil</a></li>
+            <li><a href="#">General</a></li>
+            <li><a href="#">Internacional</a></li>
+            <li><a href="#">Técnico</a></li>
+			-->
+          </ul>
+        </div>
+      </div>
+	  <div class="imprimir">
+              <div><a id="" onclick="location.reload()" href="" class="actualiza"></a></div>
+          <div><a id="printDoc" href="#" class="imprime"></a></div>
+          <div><a id="expPDF"  @href  target="_blank" class="pdf"></a></div>
+      </div>
+      <div class="card-display">
+          @BODY	  		  		 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="wrap">
+    <div class="separator"></div>
+    <div class="mobile-footer-image"> </div>
+    <div class="column1">
+      <div class="share"> <span>Síguenos en</span> 
+			<a href="https://www.facebook.com/vectorcasadebolsa" target="_blank" class="facebook">Facebook</a> 
+			<a href="https://twitter.com/eVectorMX" target="_blank" class="twitter">Twitter</a> 
+			<a href="https://www.linkedin.com/company/872049" target="_blank" class="linkedin">LinkedIn</a> 
+			<a href="https://www.youtube.com/user/VectorMediaTV" target="_blank" class="youtube">Youtube</a> 
+	  </div>
+    </div>
+    <div class="column2">
+      @DISCLOSURE
+      <div class="directorio"><a href="@DIRECTORY">Directorio</a></div>
+    </div>
+    <div class="column3">
+      <div class="nombre">@NombreAutor</div>
+      <div class="twitter">@adinfi</div>
+    </div>
+    <div class="column4">
+      <div class="tel">Teléfono: (81) 8345-9584 x3706</div>
+      <div class="email">nombre@vector.com.mx</div>
+    </div>
+    <div class="mobile-footer-copyright"> © 2012 VECTOR Casa de Bolsa. Derechos Reservados </div>
+    <div class="footer-bottom">
+      <p class="footer-info">Para cualquier observación, le sugerimos contactarse a nuestra Unidad Especializada de Atención al cliente (UNE), a la siguiente dirección <a href="mailto:une@vector.com.mx">une@vector.com.mx</a></p>
+      <p class="footer-info2">CONDUSEF: En el territorio nacional 01 800 999 80 80. En el Distrito Federal: (55) 53 40 09 99 o a la dirección electrónica <a href="mailto:asesoria@condusef.gob.mx">asesoria@condusef.gob.mx</a></p>
+    </div>
+  </div>
+</div>
+<!-- /Content -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../../../../js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+<script src="../../../../../../../js/plugins.js"></script>
+<script src="../../../../../../../js/main.js"></script>
+<script src="../../../../../../../js/vendor/jquery.jtruncate.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('.card').each(function(){
+		if( $(this).find('h2').height() == 44 )
+			$(this).addClass('two-lines');
+		if( $(this).find('h2').height() == 44 && $(this).hasClass('has-image') )
+			$(this).addClass('two-lines-img');
+		if( $(this).find('h2').height() == 66 )
+			$(this).addClass('three-lines');
+	}); 
+
+	$('.card p').jTruncate({
+		length: 170
+	});
+	$('.two-lines p').jTruncate({
+		length: 120
+	});
+	$('.three-lines p').jTruncate({
+		length: 100
+	});
+	$('.has-image p').jTruncate({
+		length: 65
+	}); 
+	$('.two-lines-img p').jTruncate({
+		length: 30
+	}); 
+
+});
+</script>
+
+        <script>
+            
+                function printPDF(){
+                    var getMyFrame = document.getElementById('iFramePdf');
+                    getMyFrame.focus();
+                    getMyFrame.contentWindow.print();
+                }
+
+                function printPDF_FF() {
+                    // hack para ver en modo impresion en el PDF.js
+                    // pdf url -> PDF.js viewer
+                    var url = window.location.href;
+                    var arrayURL = url.split('/');
+                    var urlBASE = "http://www.vectoronline.com.mx/analisis/PDFViewer/web/viewer.html?file=";
+                    var newURL = "";
+                    var pdfFile = "@PDF";
+
+                    for (var i = 0; i < arrayURL.length - 1; i++) {
+                        newURL = newURL + arrayURL[i] + "/";
+                    }
+
+                    var finalURL = urlBASE.concat(newURL, pdfFile);
+                    //window.location.href = finalURL;
+                    window.open(finalURL, '_blank');
+                }
+
+            $(function() {
+                /* $('#expPDF').click(function() {
+                    window.open("@PDF");
+                }); */
+
+                //Impresión de documento por PDF
+                $('#printDoc').click(function() {
+
+                    //window.print();
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf("MSIE ");
+                    console.log(msie);
+
+                    //hack impresión de pdf directo para explorer(8,9,10,11) chrome y firefox
+
+                    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                        //document.Pdf2.printWithDialog();
+						printPDF_FF();
+                    }
+                    else if ($.browser.mozilla) {
+                        printPDF_FF();
+                    } else {
+                        //printPDF();
+						printPDF_FF();
+                    }
+
+                });
+
+                // para la funcionalidad de los botones de incrementar y decrementar
+                $(".increase").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    if (fontSize <= 20) {
+                        fontSize = fontSize + 2 + "px";
+                        $("p").css({'font-size': fontSize});
+                        $("li").css({'font-size': fontSize});
+                    }
+
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    if (fontSize <= 20) {
+                        fontSizeh3 = fontSizeh3 + 2 + "px";
+                        $("h3").css({'font-size': fontSizeh3});
+                    }
+
+                    var fontSizeh1 = parseInt($("h1").css("font-size"));
+                    if (fontSizeh1 <= 44) {
+                        fontSizeh1_ = fontSizeh1 + 2 + "px";
+                        $("h1").css({'font-size': fontSizeh1_});
+                    }
+
+                    var fontSizeh2 = parseInt($("h2").css("font-size"));
+                    if (fontSizeh2 <= 31) {
+                        fontSizeh2_ = fontSizeh2 + 2 + "px";
+                        $("h2").css({'font-size': fontSizeh2_});
+                    }
+
+                });
+
+                $(".decrease").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    if (fontSize >= 14) {
+                        fontSize = fontSize - 2 + "px";
+                        $("p").css({'font-size': fontSize});
+                        $("li").css({'font-size': fontSize});
+                    }
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    if (fontSize >= 14) {
+                        fontSizeh3 = fontSizeh3 - 2 + "px";
+                        $("h3").css({'font-size': fontSizeh3});
+                    }
+
+                    var fontSizeh1 = parseInt($("h1").css("font-size"));
+                    if (fontSizeh1 >= 38) {
+                        fontSizeh1_ = fontSizeh1 - 2 + "px";
+                        $("h1").css({'font-size': fontSizeh1_});
+                    }
+
+                    var fontSizeh2 = parseInt($("h2").css("font-size"));
+                    if (fontSizeh2 >= 25) {
+                        fontSizeh2_ = fontSizeh2 - 2 + "px";
+                        $("h2").css({'font-size': fontSizeh2_});
+                    }
+
+                });
+            });
+
+
+        </script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		//comenzamos aplicandole un evento click a las etiquetas de tipo ancla
+		//que se encuentran en la lista (todos, rojos, azules, amarillo)
+		$('ul.listado li a').click(function() {
+			
+			//el texto al cual dimos click lo pasamos a minusculas, 
+			//le quitamos los espacios en blanco y lo asignamos a la variable
+			//textoFiltro
+			var textoFiltro = $(this).text();//.toLowerCase().replace(/\s/g,"-");
+
+			//si el texto es igual a 'todos' mostramos todos los elementos que contengan la clase hidden
+			//y a dicho elemento le removemos la clase hidden
+			//la clase hidden es opcional, en éste caso la usamos solo como referencia
+			//puedes llamarla como quieras o incluso no utilizarla
+			if(textoFiltro == 'todos') 
+			{
+				$('div.filtros div.hidden').fadeIn('slow').removeClass('hidden');
+			}
+			//de lo contrario hacemos lo siguiente
+			else
+			{
+				//aqui empieza la magia
+				
+				//hacemos un bucle con el metodo each para
+				//obtener todos los divs que se encuentren dentro de 
+				//la clase filtros
+				$('.filtros div').each(function() {
+					
+					//entonces comparamos
+					//si el elemento NO tiene una clase llamada con el mismo valor que
+					//nuestra variable textoFiltro, entonces se ocultará utilizando el metodo
+					//fadeOut() de jQuery
+					if(!$(this).hasClass(textoFiltro)) 
+					{
+						$(this).fadeOut('normal').addClass('hidden');
+					}
+					//de lo contrario se mostrará utilizando el método
+					//fadeIn() de jQuery
+					else 
+					{
+						$(this).fadeIn('slow').removeClass('hidden');
+					}
+				});
+			}
+			
+			return false;
+		});
+	});
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		-->
+</body>
+</html>

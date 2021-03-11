@@ -1,0 +1,1902 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+	border: none;
+}
+hr {
+	box-shadow: 0 -10px 50px 0px #FFF inset;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEEEE), to(#FFFFFF));
+	background: -webkit-linear-gradient(#EEEEEE 0%, #FFFFFF 100%);
+	background: -moz-linear-gradient(#EEEEEE 0%, #FFFFFF 100%);
+	background: -o-linear-gradient(#EEEEEE 0%, #FFFFFF 100%);
+	background: linear-gradient(#EEEEEE 0%, #FFFFFF 100%);
+	border-top: 1px solid #E6E6E6;
+  display: inline-block;
+  height: 1px;
+  margin: 2em 0;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Vector
+   ========================================================================== */
+
+/** 
+ *  Typography
+ */
+
+body {
+	font-family: "Arial", sans-serif;
+}
+
+body.gray {
+	background-color: #E6E6E6;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	color: #FE6A00;
+	font-size: 38px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #000;
+	font-size: 25px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+h3 {
+	color: #7F7F7F;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+h4 {
+	color: #7F7F7F;
+	font-size: 14px;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+h5 {
+	font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;
+	font-size: 17px;
+	font-weight: 100;
+}
+
+div p:first-child {
+	margin-top: 0;
+}
+
+ul {
+	list-style-image: url("../img/agenda-closed.png");
+	padding-left: 15px;
+}
+
+li {
+	font-style: italic;
+}
+
+/**
+ *  Layouts and Styles
+ */
+
+/**
+ *  Home
+ */
+ .floatL{
+ 	float: left;
+ }
+.desktop-hidden {
+		display: none;
+}
+
+.menu-nuevo {
+	color: #FFF;
+	height: 43px;
+	width: 100%;
+}
+
+.menu-nuevo li {
+	display: inline;
+}
+
+.menu-nuevo li a {
+	background-image: url("../img/bg-menu.jpg");
+	background-repeat: repeat-x;
+	border-left: #EEA53B 1px solid;
+	color: #FFF;
+	float: left;
+	font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;
+	font-size: 13px;
+	height: 25px;
+	padding: 8px;
+	text-align: center;
+	text-decoration: none;
+	width:13.5%;
+}
+
+.menu-nuevo li a:hover {
+	background-image: url("../img/bg_menuhover.jpg");
+}
+
+.front,
+.front .main-container {
+	background-color: #E9EEF6;
+}
+.card {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+  float: left;
+  height: 215px;
+  margin: 25px 5px;
+  overflow: hidden;
+  position: relative;
+  width: 308px;
+}
+.card h2,
+.card p {
+	padding: 0 20px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.card h2 {
+	color: #113A7A;
+	margin: 20px 0 0;
+}
+.card-display .card p {
+	font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;
+	font-size: 15px;
+	line-height: 1.2;
+	max-height: 92px;
+	overflow: hidden;
+}
+.card a {
+	bottom: 20px;
+	left: 20px;
+	position: absolute;
+}
+.card.has-image h2 {
+	margin-top: 8px; 
+}
+.card.has-image p {
+	margin: 5px 0 15px;
+	max-height: 38px;
+}
+.semanario-header {
+	background: url("../img/interior-bg.png") no-repeat center top;
+	background-size: 100% auto;
+	width: 100%;
+	background-color:#031229;
+}
+.semanario-header h1 {
+	color: #FFF;
+	font-size: 48px;
+	font-weight: 700;	
+	line-height: 1;
+	margin: 0;
+	padding: 35px 10px 0;
+}
+.semanario-header h2 {
+	color: #FB9403;
+	font-size: 35px;
+	font-weight: 300;
+	margin: 0;
+	padding-left: 10px;
+	padding-bottom: 30px;
+}
+
+/**
+ *  Dirección
+ */
+
+.direccion h1 {
+	background: url("../img/i-direccion.png") no-repeat 0 center;
+	color: #333;
+	float: left;
+	font-weight: 300;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	padding-left: 35px;
+}
+
+.direccion .analisis {
+	margin-top: 10px;
+}
+
+.direccion-highlight {
+	background-color: #F1F3F7;
+	clear: both;
+	float: none;
+	overflow: hidden;
+}
+.direccion-highlight h2 {
+	color: #FF6532;
+	font-size: 29px;
+	font-weight: 500;
+	margin: 18px 20px 8px;
+}
+.direccion-highlight .cargo,
+.direccion-highlight .sectores,
+.direccion-highlight .contacto {
+	float: left;
+	font-size: 18px;
+	line-height: 1.1;
+	margin: 0 20px 20px;
+}
+
+.direccion-highlight .cargo {
+	width: 340px;
+}
+.direccion-highlight .sectores {
+	width: 260px;
+}
+.direccion-highlight .contacto {
+	width: 240px;
+}
+.cargo,
+.contacto a {
+	color: #000;
+}
+.contacto a {
+	padding-left: 30px;
+}
+.contacto a:hover {
+	text-decoration: underline;
+}
+.sectores {
+	color: #666;
+}
+
+.contacto h2 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.contactos > .contacto {
+	float: left;
+	margin: 20px;
+	width: 280px;
+	min-height: 162px;
+}
+
+/* Ubicaciones */
+
+.ubicaciones-container {
+	box-shadow: 0 50px 20px -55px rgba(0, 0, 0, 0.5) inset;
+	background-color: #FFEFEA;
+	overflow: hidden;
+	padding-bottom: 60px;
+}
+
+.direccion .ubicaciones-header {
+	background: url("../img/i-ubicaciones.png") no-repeat 10px center;
+	float: none;
+}
+
+.lista-ubicaciones .ubicacion {
+	float: left;
+	font-size: 14px;
+	margin: 20px 10px;
+	width: 220px;
+}
+.lista-ubicaciones .ubicacion h2 {
+	font-size: 14px;
+	font-weight: normal;
+	margin: 6px 0;
+	text-transform: uppercase;
+}
+.lista-ubicaciones .tel a {
+	background: url("../img/i-tel-small.png") no-repeat 0 2px;
+	color: #000;
+	padding-left: 15px;
+}
+.lista-ubicaciones .tel a:hover {
+	text-decoration: underline;
+}
+.lista-ubicaciones .direccion {
+	background: url("../img/i-ubicaciones-small.png") no-repeat 0 2px;
+	line-height: 1.1;
+	margin: 6px 0;
+	text-indent: 10px;
+}
+
+.toggler-menu {
+	display: none;
+}
+
+/**
+ *  Interiores
+ */
+
+.header {
+	/*background: url("../img/bg-header.png") repeat-x 0 0 #FFF;*/
+	background-color: #eaeaea;
+	display: block;
+	overflow: hidden;
+}
+
+.gray .header {
+	background-color: #E6E6E6;
+}
+.gray h1 {
+	margin-top: 20px;
+}
+.header .wrap {
+	overflow: hidden;
+	position: relative;
+}
+
+.document-date {
+  background-color: #FFF;
+  border-left: 2px solid #0B5789;
+  border-right: 2px solid #0B5789;
+  border-top: 2px solid #0B5789;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 4px 6px -3px #666666 inset;
+  bottom: 0;
+  color: #0A335E;
+  float: right;
+  padding: 5px 15px 0;
+  position: absolute;
+  right: 0;
+}
+
+.main-container {
+	background-color: #FFF;
+	min-height: 450px;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+.gray .main-container {
+	background-color: #E6E6E6;
+}
+
+.analisis {
+	float: right;
+	margin: 36px 0 10px 0;
+}
+
+.info {
+  background: url("../img/triangle-right.png") no-repeat scroll 7px 18px #FEF0E5;
+  margin: 0 0 1em;
+  padding: 1em 1.5em;
+}
+.gray .info {
+	background-color: #EBC1A1;
+} 
+.content {
+	clear: both;
+	padding:0;
+}
+
+.left {
+	float: left;
+        display: inline-block !important;
+	margin-right: 40px;
+	width: 360px;
+        text-align: justify;
+}
+
+.description {
+	background: url("../img/triangle.png") no-repeat scroll 7px 16px #B2B2B2;
+	clear: both;
+	color: #FFF;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	margin-bottom: 25px;
+	padding: 10px 10px 10px 25px;
+	text-align: left;
+}
+
+.content p,
+.info {
+	color: #000;
+	font-family: "Arial", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.8;
+	/*margin-top:35px;*/
+	/*word-break:break-all;*/
+        /*text-align: justify;*/
+}
+.image {
+	position: relative;
+	text-align: center;
+}
+.right {
+	float: left;
+    display: inline-block !important;
+	width: 556px;
+	text-align: justify;
+    vertical-align: top;
+}
+.information {
+	float: right;
+	width: 560px;
+}
+.third {
+	float: left;
+	margin: 0 0.531914893617%;
+	width: 32.446808510638%;
+}
+
+.third.first {
+	margin-left: 0;
+}
+.third.last {
+	margin-right: 0;
+}
+.datos-vector {
+	margin-bottom: 10px;
+}
+.datos-vector .dato {
+	border-bottom: 2px solid #FFF;
+	clear: both;
+	font-size: 14px;
+	overflow: hidden;
+}
+.datos-vector .nombre {
+	background-color: #D5E7F0;
+	float: left;
+	padding: 1px 5px;
+	width: 125px;
+}
+.datos-vector .valor {
+	background-color: #DEF7F4;
+	float: left;
+	padding: 1px 5px;
+	text-align: center;
+	width: 40px;
+}
+
+.vector-view {
+	background: url("../img/bg-vector-view.png") no-repeat 0 0;
+	font-size: 14px;
+	margin: 40px 0;
+}
+.vector-view .tag {
+	background-color: #F36B00;
+	color: #FFFFFF;
+	display: inline;
+	font-weight: 300;
+	min-width: 60px;
+	padding: 2px 25px 1px 10px;
+}
+.vector-view p {
+	margin: 10px 15px;
+}
+.content-bottom {
+  clear: both;
+  padding: 10px;
+}
+
+.footer {
+	/*background: url("../img/footer-bg.png") repeat-x 0 0 #114978;*/
+	/*background: url("../img/footer.png") repeat 0 0;*/
+	background-color: #781B2B;
+	box-shadow: 0 0 16px 0 #666666;
+	color: #FFF;
+	display: block;
+	font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.2;
+	height: 182px;
+}
+
+.direccion .footer {
+	/*background-image: url("../img/bg-direccion-footer.png");*/
+	background-image: url("../img/footer.png") repeat;
+	/*background-color: #033E70;*/
+	height: auto;
+}
+.column1,
+.column2,
+.column3,
+.column4 {
+	float: left;
+	height: 70px;
+	margin-top: 17px;
+	margin-bottom: 5px;
+}
+
+.column1 {
+	border-right: 1px solid #245882;
+	width: 220px;
+}
+.column2 {
+	border-right: 1px solid #245882;
+	width: 168px;
+}
+.column2 a {
+	color: #FFF;
+}
+.column3 {
+	width: 280px;
+}
+.column4 {
+	width: 270px;
+}
+
+.column1 .share {
+	padding: 5px 25px;
+	font-size: 16px;
+}
+.share a {
+  color: transparent;
+  display: inline-block;
+  height: 23px;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999em;
+  width: 22px;
+}
+.share span {
+	display: block;
+	margin-bottom: 10px;
+}
+.column1 .share .facebook {
+	background: url("../img/FB.png") no-repeat 0 0;
+}
+.column1 .share .twitter {
+	background: url("../img/TW.png") no-repeat 0 0;
+	margin-left: 5px;
+}
+.column1 .share .linkedin {
+	background: url("../img/IN.png") no-repeat 0 0;
+	margin-left: 5px;
+}
+.column1 .share .youtube {
+	background: url("../img/YT.png") no-repeat 0 0;
+	margin-left: 5px;
+}
+.column3 .nombre {
+	font-weight: 500;
+	margin-left: 32px;
+	margin-top: 1px;
+}
+.column3 .twitter {
+	background: url("../img/twitter.png") no-repeat 0 1px;
+	margin-left: 32px;
+	padding-left: 30px;
+}
+.column4 .tel {
+	margin-top: 10px;
+}
+.directorio {
+	background: url("../img/directorio.png") no-repeat 0 0;
+	margin-left: 25px;
+	margin-top: 10px;
+  padding-left: 28px;
+  padding-top: 3px;
+}
+.disclosure {
+	background: url("../img/disclosure.png") no-repeat 0 0;
+	margin-left: 25px;
+	margin-top: 5px;
+  padding-left: 28px;
+  padding-top: 0;
+}
+.separator {
+	background: url("../img/separator.png") no-repeat 0 0;
+  height: 5px;
+  position: relative;
+  top: -1px;
+  width: 960px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #245882;
+  clear: both;
+  font-size: 12px;
+  padding-top: 20px;
+  text-align: center;
+}
+.footer-bottom p {
+	margin: 3px;
+}
+.footer-bottom a {
+	color: #FFF;
+	font-weight: bold;
+}
+.wrap {
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+}
+
+.logo {
+	float: left;
+	padding: 20px 0 24px;
+}
+
+.image img {
+	width: 100%;
+}
+
+.mail a {
+	background: url("../img/i-mail.png") no-repeat 0 center;
+}
+.tel a {
+	background: url("../img/i-tel.png") no-repeat 0 center;
+}
+.tel{
+	font-style:oblique;
+}
+.footer-twitter {
+	float: left;
+	font-size: 24px;
+	font-weight: 100;
+	margin: 40px 0;
+}
+.footer-twitter a {
+	background: url("../img/twitter.png") no-repeat 0 center;
+	color: #FFF;
+	padding-left: 30px;
+	margin-left: 2px;
+}
+.footer-twitter a:hover {
+	text-decoration: underline;
+}
+.footer-sitio {
+	float: right;
+	font-size: 24px;
+	font-weight: 100;
+	margin: 40px 0;
+}
+
+.footer-extra {
+	clear: both;
+	float: none;
+	font-size: 14px;
+	padding-bottom: 40px;
+}
+
+/**
+ *  Agenda
+ */
+
+.column-1,
+.column-2 {
+	text-align: center;
+	width: 7%;
+}
+.column-3 {
+	text-align: center; 
+	width: 8%;
+}
+.column-4 {
+	overflow: hidden;
+	text-indent: 10px;
+	text-overflow: ellipsis;
+	width: 34%;
+	white-space: nowrap;
+}
+.column-5 {
+	text-align: center;
+	width: 8%;
+}
+.column-6,
+.column-7,
+.column-8,
+.column-9 {
+	text-align: center;
+	width: 8.5%;
+}
+.eventos-por-dia {
+	color: #525261;
+	display: none;
+}
+.agenda-economica {
+	border: 1px solid #CEE1EE;
+	clear: both;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+.agenda-economica hr {
+	margin: 15px 0 0;
+	padding: 8px;
+}
+.agenda-add {
+	color: #666;
+	font-size: 12px;
+	float: right;
+	margin-bottom: 5px;
+}
+.agenda-economica .agenda-add-item {
+	display: none;
+}
+.agenda-economica .lugar-mobile,
+.agenda-economica .hora-mobile {
+	display: none;
+}
+.agenda-add-item {
+	display: block;
+	float: left;
+}
+.agenda-add-item a {
+	background: url("../img/calendars.png") no-repeat 2px 0;
+	display: block;
+	height: 40px;
+	text-indent: -999em;
+	width: 40px;
+}
+.agenda-day-add .agenda-add-item a {
+	background: url("../img/calendars-small.png") no-repeat 2px 0;
+	height: 25px;
+	width: 28px;
+}
+.agenda-day-add .agenda-add-item .ical {
+	background-position: 5px -24px;
+}
+.agenda-day-add .agenda-add-item .outlook {
+	background-position: -24px -24px;
+}
+.agenda-day-add .agenda-add-item .google-cal {
+	background-position: -50px -24px;
+}
+.agenda-day-add .agenda-add-item .ical:hover {
+	background-position: 5px 0;
+}
+.agenda-day-add .agenda-add-item .outlook:hover {
+	background-position: -24px 0;
+}
+.agenda-day-add .agenda-add-item .google-cal:hover {
+	background-position: -50px 0;
+}
+.agenda-day-add .agenda-add-item:first-child {
+  color: #666666;
+  padding: 5px;
+}
+.agenda-add-item:first-child {
+	width: 95px;
+}
+.agenda-add-item .outlook {
+	background-position: -40px 0;
+}
+.agenda-add-item .google-cal {
+	background-position: -80px 0;
+}
+.agenda-header {
+	background-color: #CEE1EE;
+	clear: both;
+	height: 40px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding-top: 5px;
+	position: relative;
+	text-transform: uppercase;
+}
+.agenda-header div {
+	border-left: 1px solid #FFF;
+	color: #04203F;
+	display: block;
+	height: 36px;
+	font-family: "Museo Sans", sans-serif;
+	font-size: 12px;
+	float: left;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+.agenda-header div:first-child {
+	border-left: none;
+}
+.agenda-body > div {
+	clear: both;
+	overflow: hidden;
+}
+.agenda-body > div > div {
+	box-shadow: 5px 0 35px 0px #f6f6f6;
+	border-left: 1px solid #eee;
+	float: left;
+	display: block;
+	padding: 5px 0;
+}
+.agenda-body > div > div:first-child {
+	border: none;
+}
+.agenda-body > div > div.column-9 {
+	box-shadow: none;
+}
+.agenda-body .name {
+	display: none;
+}
+.agenda-body .value {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-indent: 0;
+	padding-left: 10px;
+	white-space: normal;
+}
+
+.agenda-week {
+	clear: both;
+	width: 100%;
+}
+.agenda-week + hr {
+	display: none;
+}
+.weekday {
+	background-color: #FFFFFF;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), to(#F3F3F3));
+	background: -webkit-linear-gradient(#FFFFFF 0%, #F3F3F3 100%);
+	background: -moz-linear-gradient(#FFFFFF 0%, #F3F3F3 100%);
+	background: -o-linear-gradient(#FFFFFF 0%, #F3F3F3 100%);
+	background: linear-gradient(#FFFFFF 0%, #F3F3F3 100%);
+	border: 1px solid #CCCCCC;
+	float: left;
+	font-size: 16px;
+	min-height: 277px;
+	position: relative;
+	width: 190px;
+}
+.weekday:nth-child(even) {
+	background: #EEEEEE;
+}
+.dayname {
+	color: #999999;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	margin-bottom: 10px;
+}
+.daynumber {
+	background-color: #333333;
+	color: #FFF;
+	float: right;
+	padding: 5px 10px;
+	width: 15px;
+}
+.dayevents {
+	clear: both;
+	font-size: 12px;
+	padding-left: 5px;
+}
+.dayevents ul {
+	list-style: none;
+}
+.agenda-day-add {
+	bottom: 0;
+	clear: both;
+	font-size: 12px;
+	position: absolute;
+}
+.tablet-mobile-only {
+	display: none;
+}
+
+/**
+ *  Hide Elements for Desktop
+ */
+
+.authoring-mobile,
+.mobile-footer-copyright,
+.mobile-footer-image {
+	display: none;
+}
+
+/**
+ *  Elements and styles
+ */
+
+input[type="text"],
+input[type="search"],
+textarea {
+	border: 1px solid #CCC;
+}
+
+/* yellow button */
+.btn,
+input[type="button"],
+input[type="submit"] {
+	background: #F86A00;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FDBD05), to(#F86A00));
+	background-image: -webkit-linear-gradient(#FDBD05 0%, #F86A00 100%);
+	background-image: -moz-linear-gradient(#FDBD05 0%, #F86A00 100%);
+	background-image: -o-linear-gradient(#FDBD05 0%, #F86A00 100%);
+	background-image: linear-gradient(#FDBD05 0%, #F86A00 100%);
+	border: 1px solid #FDBD05;
+	border-radius: 7px;
+	box-shadow: 0 0 0 1px #F97C01;
+	color: #FFF;
+	font-size: 16px;
+	padding: 3px 10px;
+}
+
+/**
+ *  Imprimir  y PDF
+ */
+ .imprimir{
+ 	width: 95%;
+ 	height: 35px;
+ 	margin: 0 auto;
+ 	padding-right: 40px;
+ }
+ .imprime{
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../img/print.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+ }
+ 
+  .actualiza{
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../img/refresh.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+        margin-left: 15px;
+ }
+
+
+ .pdf{
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../img/pdf.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+ 	margin-right: 15px;
+ }
+ .increase{
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../img/plus.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+ 	margin-right: 15px;
+ }
+ .decrease{
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../img/minus.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+ 	margin-right: 15px;
+ }
+
+ .sound{
+ 	width: 30px;
+ 	height: 24px;
+ 	background: url(../img/sound.png);
+ 	background-repeat: no-repeat;
+ 	float: right;
+ 	margin-right: 15px;
+ }
+.desktop-hidden {
+		display: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+.sectionModCol {
+    padding-left: 5px; 
+    background: #F34700; 
+    color: #FFF; 
+    width: 20%;
+}
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+
+/* Tablet Landscape & Portrait */
+@media only screen and (max-width: 990px) {
+	
+	.imprimir{
+ 	width: 95%;
+ 	height: 35px;
+ 	margin: 0 auto;
+ 	padding-right: 40px;
+ }
+
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+	.header,
+	.main-container {
+		padding: 0 15px;
+	}
+	.wrap {
+		width: 100%;
+	}
+	.card {
+		height: 230px;
+		margin-left: 0.529100529101%;
+		margin-right: 0.529100529101%;
+		width: 31.957671957672%;
+	}
+	.right {
+		width: 60%;
+	}
+	.right > * {
+		margin-left: 30px;
+	}
+	.information {
+		width: 60%;
+	}
+	.information .info {
+		margin-left: 30px; 
+	}
+	.left {
+		width: 40%;
+		margin: 0;
+	}
+	.authoring-mobile {
+		display: block;
+    float: left;
+    font-size: 12px;
+    margin-top: 20px;
+	}
+	.authoring-mobile a {
+		color: #FE6A00;
+	}
+	.authoring-mobile a {
+		background: none;
+	}
+	.authoring-mobile .twitter {
+    background: url("../img/twitter.png") no-repeat scroll 0 1px transparent;
+    background-size: 16px auto;
+    padding-left: 20px;
+	}
+	.analisis {
+		margin-top: 20px;
+		width: 100px;
+	}
+	.footer {
+		overflow: hidden;
+		padding: 0 15px;
+	}
+	.separator {
+		background-size: 100% 5px;
+		width: 100%;
+	}
+	.column1 {
+		width: 31%;
+	}
+	.column2 {
+		width: 20%;
+	}
+	.column1 .share {
+		padding: 5px 0;
+		text-align: center;
+	}
+	.column1,
+	.column2 {
+		border: none;
+	}
+	.column3,
+	.column4 {
+		display: none;
+	}
+	.mobile-footer-image {
+		background: url("../img/footer-logo.png") no-repeat scroll 25px 15px transparent;
+		display: block;
+		float: left;
+		height: 90px;
+		width: 49%;
+	}
+	.footer-bottom {
+		font-size: 13px;
+		padding: 10px 12% 0;
+	}
+	.semanario-header {
+		background-size: auto 202px;
+	}
+	.direccion-highlight .cargo,
+	.direccion-highlight .sectores,
+	.direccion-highlight .contacto { /* direccion-highlight: 945px */
+		margin: 0 1.5% 20px; /* 20px / 945 */
+	}
+
+	.direccion-highlight .cargo {
+		width: 35%;	/* 340px / 945 */
+	}
+	.direccion-highlight .sectores {
+		width: 27%; /* 260px / 945 */
+	}
+	.direccion-highlight .contacto {
+		white-space: nowrap;
+		width: 25%; /* 240 / 945 */
+	}
+	.contactos > .contacto {
+		margin: 20px 2%;
+		width: 29%;
+	}
+	.lista-ubicaciones .ubicacion {
+		margin: 20px 5%;
+		width: 23%;
+	}
+	.tablet-mobile-hidden {
+		display: none;
+	}
+	.tablet-mobile-only {
+		display: block;
+	}
+	.agenda-week + hr {
+		display: inline-block;
+	}
+	.weekday {
+		overflow: hidden;
+		min-height: auto;
+		width: 100%;
+	}
+	.agenda-month .weekday {
+		min-height: inherit;
+		height: 32px;
+	}
+	.no-js .agenda-month .weekday {
+		height: auto;
+	}
+	.weekday.active {
+		height: auto;
+	}
+	.weekday:nth-child(2n) {
+		border-top: none;
+		border-bottom: none;
+	}
+	.dayname {
+		background: url("../img/agenda-open.png") no-repeat 3px 11px #333;
+		color: #FFF;
+    font-size: 12px;
+    padding: 8px 0 8px 20px;
+    width: 55px;
+	}
+	.agenda-month .dayname {
+		background-image: url("../img/agenda-closed.png");
+		background-position: 5px 8px ;
+	}
+	.active .dayname {
+		background-image: url("../img/agenda-open.png");
+		background-position: 3px 11px;
+	}
+	.daynumber {
+		float: left;
+    font-size: 12px;
+    padding: 8px 5px 8px 10px;
+	}
+	.agenda-day-add {
+		font-size: 14px;
+		top: 5px;
+		right: 5px;
+	}
+	.agenda-body .agenda-day-add {
+		opacity: 1;
+		top: 2px;
+	}
+	.agenda-day-add .agenda-add-item:first-child {
+		color: #999;
+    font-size: 12px;
+    padding: 3px;
+    text-align: right;
+		width: 100px;
+	}
+	.dayevents {
+		font-size: 14px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		padding-left: 10px;
+	}
+	.dayevents li {
+		width: 50%;
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.desktop-hidden{
+		display:block;
+	}
+	.imprimir{
+ 	width: 95%;
+ 	}
+	.menu-nuevo li a{
+		border-left: 1px solid #EEA53B;
+    	color: #FFFFFF;
+    	float: left;
+	/*font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;*/
+    	font-size: 13px;
+    	height: 25px;
+    	padding: 8px 0;
+    	text-align: center;
+    	text-decoration: none;
+    	width: 14%;
+	}
+	.menu-nuevo li a:hover{
+	background-image:url(../img/bg_menuhover.jpg);
+	background-repeat:repeat-x;
+}
+	h1 {
+		font-size: 22px;
+		margin-bottom:0;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	.left,
+	.right,
+	.information {
+		float: none;
+		width: 100%;
+	}
+	.right {
+		margin-top: 20px;
+	}
+	.right > *,
+	.information .info {
+		margin-left: 0;
+	}
+	.card {
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    width: 48%;
+	}
+	.front .analisis {
+		width: 35%;
+	}
+	.mobile-footer-image {
+		width: 40%;
+	}
+	.column1 {
+		width: auto;
+	}
+	.column2 {
+    float: right;
+    margin-right: 10px;
+    width: auto;
+	}
+	.column2 .disclosure,
+	.column2 .directorio {
+		margin-left: 0;
+	}
+	.footer {
+		/*background: url("../img/footer-bg-mobile.png") repeat-x 0 0 #002447;*/
+		background: url("../img/footer.png") repeat 0 0;
+		height: auto;
+	}
+	.footer-bottom {
+		padding: 10px;
+		font-size: 15px;
+	}
+	.footer-twitter,
+	.footer-sitio {
+		font-size: 20px;
+		margin: 40px 0;
+	}
+	.content-bottom {
+		padding: 0;
+	}
+	.direccion .analisis {
+		margin-bottom: 20px;
+	}
+	.direccion h1 {
+		clear: both;
+		float: none;
+	}
+	.direccion-highlight .cargo,
+	.direccion-highlight .sectores,
+	.direccion-highlight .contacto {
+		clear: both;
+		float: none;
+		width: auto;
+		margin-left: 20px;
+	}
+	.contactos > .contacto {
+		margin: 20px 2%;
+		width: 44%;
+	}
+	.lista-ubicaciones .ubicacion {
+		width: 40%;
+	}
+
+	.mobile-footer-copyright {
+		clear: both;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		padding-right: 25px;
+		margin-bottom: 15px;
+		text-align: right;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+	hr {
+    left: -15px;
+    position: relative;
+    width: calc(100% + 30px);
+	}
+	.agenda-economica {
+		border: none;
+	}
+	.agenda-economica .agenda-add-item {
+		display: block;
+	}
+	.agenda-add-item a {
+		background: url("../img/calendars-small.png") no-repeat 2px 0;
+		height: 25px;
+		width: 28px;
+	}
+	.agenda-add-item .ical {
+		background-position: 5px 0;
+	}
+	.agenda-add-item .outlook {
+		background-position: -24px 0;
+	}
+	.agenda-add-item .google-cal {
+		background-position: -50px 0;
+	}
+	/* Agenda */
+	.eventos-por-dia {
+		display: block;
+	}
+	.agenda-header {
+		display: none;
+	}
+	.agenda-body .name {
+		display: inline;
+		float: left;
+	}
+	.agenda-body > div {
+		border: 1px solid #CCC;
+		max-height: 19px;
+		margin: 0 0 -1px;
+		padding: 0 10px 10px;
+		position: relative;
+		-webkit-transition: all 300ms linear;
+			 -moz-transition: all 300ms linear;
+				-ms-transition: all 300ms linear;
+				 -o-transition: all 300ms linear;
+						transition: all 300ms linear;
+	}
+	.agenda-body > div.active {
+		max-height: 100%;
+	}
+	.agenda-body > div > div {
+		border: none;
+		box-shadow: none;
+		-webkit-transition: opacity 300ms linear;
+			 -moz-transition: opacity 300ms linear;
+				-ms-transition: opacity 300ms linear;
+				 -o-transition: opacity 300ms linear;
+						transition: opacity 300ms linear;
+		opacity: 0;
+		padding: 0;
+	}
+	.agenda-body > div.active > div {
+		opacity: 1;
+	}
+	.agenda-body .column-1 {
+		opacity: 1;
+	}
+	.column-1 {
+		margin-left: -10px;
+		text-align: left;
+		width: 50%;
+	}
+	.column-1 .name {
+		display: none;
+	}
+	.column-1 .value {
+		-webkit-transition: all 300ms linear;
+			 -moz-transition: all 300ms linear;
+				-ms-transition: all 300ms linear;
+				 -o-transition: all 300ms linear;
+						transition: all 300ms linear;
+
+		background: url("../img/agenda-closed.png") no-repeat 8px center #CEE1EE;
+		background-size: 6px auto;
+		display: inline-block;
+		padding: 6px 15px 4px 25px;
+		border-bottom: 1px solid #CEE1EE;
+		border-right: 1px solid #CCC;
+	}
+	.active .column-1 .value {
+		background-image: url("../img/agenda-open.png");
+		background-size: auto 6px;
+		background-position: 5px center;
+		border-bottom: 1px solid #CCC;
+		padding-left: 6px;
+	}
+	.agenda-economica .column-2,
+	.agenda-economica .column-3 {
+		display: none;
+	}
+	.agenda-economica .lugar-mobile,
+	.agenda-economica .hora-mobile {
+		display: block;
+	}
+	.agenda-body .value {
+		text-indent: 10px;
+		padding-left: 5px;
+	}
+	.column-4 {
+		background-color: #E6E6E6;
+		margin: 10px 0;
+		padding: 10px 10px;
+		width: 100%;
+	}
+	.column-4 .name {
+		padding: 10px;
+	}
+	.column-4 .value {
+		font-weight: bold;
+		padding: 10px;
+		text-indent: 0;
+		white-space: normal;
+	}
+	.hora-mobile,
+	.lugar-mobile,
+	.column-5,
+	.column-6,
+	.column-7,
+	.column-8,
+	.column-9 {
+		color: #666;
+		text-align: left;
+		margin: 0px 0;
+		width: 50%;
+	}
+	.hora-mobile div,
+	.lugar-mobile div,
+	.column-5 div,
+	.column-6 div,
+	.column-7 div,
+	.column-8 div,
+	.column-9 div {
+		width: 50%;
+	}
+	.hora-mobile .name,
+	.lugar-mobile .name,
+	.column-5 .name,
+	.column-6 .name,
+	.column-7 .name,
+	.column-8 .name,
+	.column-9 .name {
+		color: #000;
+		text-align: right;
+	}
+
+	.agenda-economica hr {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.imprimir{
+ 	width: 95%;
+    }
+	
+	.desktop-hidden{
+		display:block;
+	}
+	.menu-nuevo {
+		width:100%;
+		height:43px;
+		background-image:url(../img/bg-menu.jpg);
+		background-repeat:repeat-x;
+		color:#FFF;
+}
+	.menu-nuevo li{
+		display:block;
+		width:100%;
+	}
+	.menu-nuevo ul{
+		width:100%;
+	}
+	.menu-nuevo li a{
+		 border-left: 1px solid #EEA53B;
+    	color: #FFFFFF;
+	font-family: "Museo Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    	font-size: 17px;
+    	height: 25px;
+    	padding: 8px 0;
+    	text-align: center;
+    	text-decoration: none;
+    	width: 100%;
+	}
+	.menu-nuevo ul li a:hover{
+	background-image:url(../img/bg_menuhover.jpg);
+	background-repeat:repeat-x;
+	
+}
+	
+	.card {
+		clear: both;
+		float: none;
+		height: auto;
+		margin-left: 0;
+		margin-right: 0;
+		padding-bottom: 20px;
+		width: auto;
+	}
+	.semanario-header h1 {
+		font-size: 36px;
+	}
+	.semanario-header h2 {
+		font-size: 24px;
+	}
+	.semanario-header .analisis {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.card-display .card p {
+		max-height: none!important;
+	}
+	.card a {
+		bottom: 0;
+		position: relative;
+	}
+	.direccion h1 {
+		font-size: 26px;
+	}
+	.direccion-highlight h2 {
+		font-size: 20px;
+	}
+	.contactos > .contacto {
+		clear: both;
+		float: none;
+		padding: 0 10px;
+		width: auto;
+	}
+	.mobile-footer-image {
+		background-position: center center;
+		width: 100%;
+	}
+	.column1 {
+		clear: left;
+		margin: 10px 0 10px 10%;
+	}
+	.column2 {
+		margin: 10px 10% 10px 0;
+	}
+	.mobile-footer-copyright {
+		text-align: center;
+		padding: 0;
+	}
+	.lista-ubicaciones .ubicacion {
+		float: none;
+		margin: 20px 25px;
+		width: auto;
+	}
+	.footer-twitter {
+		float: none;
+	}
+	.footer-sitio {
+		display: none;
+	}
+	.dayevents li {
+		width: 100%;
+		float: none;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+.imprimir{
+ 	width: 95%;
+ }
+
+.desktop-hidden{
+		display:block;
+	}
+	.menu-nuevo {
+		display: none;
+		height: auto;
+		overflow: hidden;
+		position:fixed;
+		top:38px;
+		width:100%;
+		z-index:999;
+	}
+	.toggler-menu {
+		display: block;
+		height: 38px;
+		width: 55px;
+		top:0;
+		left:250px;
+		position:relative;
+	}
+	.menu-container {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	.logo {
+		width: 45%;
+	}
+	.semanario-header {
+		border-top: 2px solid #0B5687;
+	}
+	.header,
+	.main-container,
+	.footer {
+		padding: 0 10px;
+	}
+	.right {
+		font-size: 16px;
+	}
+	.footer-bottom p {
+		margin: 10px;
+	}
+	.column1 {
+		margin: 10px 0 10px 5px;
+	}
+	.column2 {
+		margin: 10px 0 10px 5px;
+	}
+	.hora-mobile .name,
+	.lugar-mobile .name,
+	.column-5 .name,
+	.column-6 .name,
+	.column-7 .name,
+	.column-8 .name,
+	.column-9 .name {
+		width: 55%;
+		padding-right: 2%;
+		display: inline;
+	}
+	.hora-mobile .value,
+	.lugar-mobile .value,
+	.column-5 .value,
+	.column-6 .value,
+	.column-7 .value,
+	.column-8 .value,
+	.column-9 .value {
+		width: 45%;
+		display: inline;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min-resolution: 144dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/*
+	 * Don't show links for images, or javascript/internal links
+	 */
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	thead {
+		display: table-header-group; /* h5bp.com/t */
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}

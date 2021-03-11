@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>adPublish</title>
+        <meta name="description" content="adPublish Reportes"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="../../../../../../fonts/museo-sans/stylesheet.css"/>
+        <link rel="stylesheet" href="../../../../../../css/normalize.css"/>
+        <link rel="stylesheet" href="../../../../../../css/main.css"/>
+        <link rel="stylesheet" href="../../../../../../css/responsiveslides.css"/>
+        <link rel="stylesheet" href="../../../../../../css/agenda.css"/>
+        <link rel="stylesheet" href="../../../../../../css/fancybox/jquery.fancybox.css"/>
+        <script src="../../../../../../js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- Content -->
+        <div class="header">
+            <div class="wrap">
+
+                <div class="logo">
+                    <a href="http://www.adinfi.com/">
+                        <img src="../../../../../../img/logo.png" alt="adPublish"/>
+                    </a>
+                </div>
+                <div class="document-date">
+                    @FECHA_HOY
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class='wrap'>
+                <div class="authoring-mobile">
+                    @autorNombreEmailMobile
+                    <div class="twitter">@adinfi</div>
+                    <div class="tel">Teléfono: (81) 8345-9584</div>
+                </div>
+                <div class="analisis" style="width: 100%;">
+                    <img src="../../../../../../img/header.png" alt="adPublish Analisis" style="width: 100%;"/>
+                </div>
+                <div class='content'>
+
+                    <div class="imprimir">
+                        <div><a id="printDoc" href="#" class="imprime"></a></div>
+                        <div><a id="expPDF"  @href  target="_blank" class="pdf"></a></div>
+                        <div><a href="#" class="increase"></a></div>
+                        <div><a href="#" class="decrease"></a></div>
+                    </div>				
+                    @BODY 
+                </div>
+                <div style="float:left;">
+                    @RELFILE
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="wrap">
+                <div class="separator"></div>
+                <div class="mobile-footer-image">
+                </div>
+                <div class="column1">
+                    <div class="share">
+                        <span>Síguenos en</span>
+                        <a href="https://www.facebook.com/vectorcasadebolsa" target="_blank" class="facebook">Facebook</a> 
+                        <a href="https://twitter.com/eVectorMX" target="_blank" class="twitter">Twitter</a> 
+                        <a href="https://www.linkedin.com/company/872049" target="_blank" class="linkedin">LinkedIn</a> 
+                        <a href="https://www.youtube.com/user/VectorMediaTV" target="_blank" class="youtube">Youtube</a> 
+                    </div>
+                </div>
+                <div class="column2">
+                    @DISCLOSURE
+                    <div class="directorio"><a href="@DIRECTORY" target="_blank">Directorio</a></div>
+                </div>
+                <div class="column3">
+                    <div class="nombre">adPublish</div>
+                    <div class="twitter">@adinfi</div>
+                </div>
+                <div class="column4">
+                    <div class="email">@emailvector</div>
+                    <div class="tel">Teléfono: (81) 8345-9584</div>
+                </div>
+                <div class="mobile-footer-copyright">
+                    © 2012 VECTOR Casa de Bolsa. Derechos Reservados
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-info">Para cualquier observación, le sugerimos contactarse a nuestra Unidad Especializada de Atención al cliente (UNE), a la siguiente dirección <a href="mailto:une@adinfi.com.mx">une@adinfi.com.mx</a></p>
+                    <p class="footer-info2">CONDUSEF: En el territorio nacional 01 800 999 80 80. En el Distrito Federal: (55) 53 40 09 99 o a la dirección electrónica <a href="mailto:asesoria@condusef.gob.mx">asesoria@condusef.gob.mx</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- /Content -->
+
+        <script src="../../../../../../js/jquery-1.8.3.min.js"></script>
+        <script src="../../../../../../js/plugins.js"></script>
+        <script src="../../../../../../js/main.js"></script>
+        <script src="../../../../../../js/vendor/responsiveslides.js"></script>
+        <script src="../../../../../../js/vendor/jquery.fancybox.js"></script>
+        @SCRIPT_ADICIONAL
+        <script>
+                            $(function() {
+                                $('.fancybox').fancybox();
+                                $(".various").fancybox({
+                                    maxWidth: 800,
+                                    maxHeight: 600,
+                                    fitToView: false,
+                                    width: '70%',
+                                    height: '70%',
+                                    autoSize: false,
+                                    closeClick: false,
+                                    openEffect: 'none',
+                                    closeEffect: 'none'
+                                });
+                                $(".rslides").responsiveSlides({
+                                    auto: false,
+                                    /*
+                                     auto: true,             // Boolean: Animate automatically, true or false
+                                     speed: 500,            // Integer: Speed of the transition, in milliseconds
+                                     timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+                                     pager: false,           // Boolean: Show pager, true or false
+                                     */ nav: true /*,             // Boolean: Show navigation, true or false
+                                      random: false,          // Boolean: Randomize the order of the slides, true or false
+                                      pause: false,           // Boolean: Pause on hover, true or false
+                                      pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+                                      prevText: "Previous",   // String: Text for the "previous" button
+                                      nextText: "Next",       // String: Text for the "next" button
+                                      maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+                                      navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                                      manualControls: "",     // Selector: Declare custom pager navigation
+                                      namespace: "rslides",   // String: Change the default namespace used
+                                      before: function(){},   // Function: Before callback
+                                      after: function(){}     // Function: After callback
+                                      */
+                                });
+                            });
+        </script>
+
+        <script>
+            
+                function printPDF(){
+                    /*var getMyFrame = document.getElementById('iFramePdf');
+                    getMyFrame.focus();
+                    getMyFrame.contentWindow.print();*/
+                    printPDF_FF();
+                }
+
+                function printPDF_FF() {
+                    // hack para ver en modo impresion en el PDF.js
+                    // pdf url -> PDF.js viewer
+                    var url = window.location.href;
+                    var arrayURL = url.split('/');
+                    var urlBASE = "http://www.vectoronline.com.mx/analisis/PDFViewer/web/viewer.html?file=";
+                    var newURL = "";
+                    var pdfFile = "@PDF";
+
+                    for (var i = 0; i < arrayURL.length - 1; i++) {
+                        newURL = newURL + arrayURL[i] + "/";
+                    }
+
+                    var finalURL = urlBASE.concat(newURL, pdfFile);
+                    //window.location.href = finalURL;
+                    window.open(finalURL, '_blank');
+                }
+
+            $(function() {
+                /* $('#expPDF').click(function() {
+                    window.open("@PDF");
+                }); */
+                
+                $('p').each(function() {
+                    var $this = $(this);
+                    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
+                        $this.css( "margin-bottom", "14px" );
+						$this.css( "height", "11px" );
+                    }else{
+                        $this.css( "margin", "0" );
+                    }
+                });
+                
+                //Impresión de documento por PDF
+                $('#printDoc').click(function() {
+
+                    //window.print();
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf("MSIE ");
+                    console.log(msie);
+
+                    //hack impresión de pdf directo para explorer(8,9,10,11) chrome y firefox
+
+                    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                        //document.Pdf2.printWithDialog();
+                        printPDF_FF();
+                    }
+                    else if ($.browser.mozilla) {
+                        printPDF_FF();
+                    } else {
+                        printPDF();
+                    }
+
+                });
+
+                // para la funcionalidad de los botones de incrementar y decrementar
+                $(".increase").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    if (fontSize <= 20) {
+                        fontSize = fontSize + 2 + "px";
+                        $("p").css({'font-size': fontSize});
+                        $("li").css({'font-size': fontSize});
+                    }
+
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    if (fontSize <= 20) {
+                        fontSizeh3 = fontSizeh3 + 2 + "px";
+                        $("h3").css({'font-size': fontSizeh3});
+                    }
+
+                    var fontSizeh1 = parseInt($("h1").css("font-size"));
+                    if (fontSizeh1 <= 44) {
+                        fontSizeh1_ = fontSizeh1 + 2 + "px";
+                        $("h1").css({'font-size': fontSizeh1_});
+                    }
+
+                    var fontSizeh2 = parseInt($("h2").css("font-size"));
+                    if (fontSizeh2 <= 31) {
+                        fontSizeh2_ = fontSizeh2 + 2 + "px";
+                        $("h2").css({'font-size': fontSizeh2_});
+                    }
+                    
+                    var fontSizeclass = parseInt($(".agenda-economica").css("font-size"));
+                     if (fontSizeclass <= 31) {
+                        fontSizeclass_ = fontSizeclass + 2 + "px";
+                        $(".agenda-economica").css({'font-size': fontSizeclass_});
+                    }
+
+                });
+
+                $(".decrease").click(function() {
+
+                    var fontSize = parseInt($("p").css("font-size"));
+                    if (fontSize >= 14) {
+                        fontSize = fontSize - 2 + "px";
+                        $("p").css({'font-size': fontSize});
+                        $("li").css({'font-size': fontSize});
+                    }
+                    var fontSizeh3 = parseInt($("h3").css("font-size"));
+                    if (fontSize >= 14) {
+                        fontSizeh3 = fontSizeh3 - 2 + "px";
+                        $("h3").css({'font-size': fontSizeh3});
+                    }
+
+                    var fontSizeh1 = parseInt($("h1").css("font-size"));
+                    if (fontSizeh1 >= 38) {
+                        fontSizeh1_ = fontSizeh1 - 2 + "px";
+                        $("h1").css({'font-size': fontSizeh1_});
+                    }
+
+                    var fontSizeh2 = parseInt($("h2").css("font-size"));
+                    if (fontSizeh2 >= 25) {
+                        fontSizeh2_ = fontSizeh2 - 2 + "px";
+                        $("h2").css({'font-size': fontSizeh2_});
+                    }
+                    
+                    var fontSizeclass = parseInt($(".agenda-economica").css("font-size"));
+                     if (fontSizeclass >= 14) {
+                        fontSizeclass_ = fontSizeclass - 2 + "px";
+                        $(".agenda-economica").css({'font-size': fontSizeclass_});
+                    }
+
+                });
+            });
+
+
+        </script>
+
+        <script>
+            $(function() {
+                var indicador_function = function() {
+                    viewportWidth = $(window).width();
+                    if (viewportWidth >= 761) {
+                        var indicadores = $('.column-4');
+                        $(indicadores).each(function() {
+                            $(this).height('');
+                            $(this).siblings().height('');
+                            if ($(this).height() != 18) {
+                                var new_height = $(this).height();
+                                $(this).siblings().height(new_height);
+                            }
+                        });
+                    }
+                    else {
+                        $(indicadores).each(function() {
+                            $(this).height('');
+                            $(this).siblings().height('');
+                        });
+                    }
+                };
+                indicador_function();
+                $(window).bind('resize', indicador_function);
+            });
+        </script>
+
+        <!-- hack para impresión directa por pdf -->
+        <object  id = "Pdf2" name="Pdf2" CLASSID="clsid:CA8A9780-280D-11CF-A24D-444553540000" WIDTH="0" HEIGHT="0">
+            <param NAME='SRC' VALUE="@PDF">
+        </object>
+    </body>
+</html>

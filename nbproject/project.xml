@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.java.j2seproject</type>
+    <configuration>
+        <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
+            <extension file="jaxws-build.xml" id="jaxws">
+                <dependency dependsOn="wsimport-client-generate" target="-pre-pre-compile"/>
+            </extension>
+        </buildExtensions>
+        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+            <name>VEC-413-Formateador</name>
+            <minimum-ant-version>1.6.5</minimum-ant-version>
+            <explicit-platform explicit-source-supported="true"/>
+            <source-roots>
+                <root id="src.dir"/>
+            </source-roots>
+            <test-roots>
+                <root id="test.src.dir"/>
+            </test-roots>
+        </data>
+        <web-service-clients xmlns="http://www.netbeans.org/ns/j2se-project/jax-rpc">
+            <web-service-client>
+                <web-service-client-name>Publicador.svc</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/AnalisisWS/Publicador.svc?wsdl</client-source-url>
+            </web-service-client>
+            <web-service-client>
+                <web-service-client-name>Publicador.svc1</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/PublicadorWS/Publicador.svc?wsdl</client-source-url>
+            </web-service-client>
+            <web-service-client>
+                <web-service-client-name>VectorMedia.svc</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/AnalisisWS/VectorMedia.svc?wsdl</client-source-url>
+            </web-service-client>
+            <web-service-client>
+                <web-service-client-name>Access.svc</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/VCBAuthWS/Access.svc?wsdl</client-source-url>
+            </web-service-client>
+            <web-service-client>
+                <web-service-client-name>Data.svc</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/AnalisisWS/Data.svc?wsdl</client-source-url>
+            </web-service-client>
+            <web-service-client>
+                <web-service-client-name>emisoras.svc</web-service-client-name>
+                <web-service-stub-type>jaxrpc_static_client</web-service-stub-type>
+                <client-source-url>http://204.126.12.161:90/analisisWS/emisoras.svc?wsdl</client-source-url>
+            </web-service-client>
+        </web-service-clients>
+    </configuration>
+</project>
